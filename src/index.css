@@ -18,6 +18,14 @@ h1 {
   font-weight: 500;
 }
 
+
+.connected__circle{
+  background-color:rgb(23, 190, 23);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
 /* NAVBAR=================================================================== */
 .navbar__container {
   height: 52px;
@@ -150,7 +158,7 @@ h1 {
 .post__content-container {
   display: grid;
   padding: 2rem 2rem 0 2rem;
-
+  gap: 1rem;
   grid-template-columns: 2fr 1fr;
   background-color: #1d5f69;
 }
@@ -296,3 +304,60 @@ h1 {
   
   gap: 1rem;
 }
+
+
+
+
+/* POST ABOUT==================================== */
+.postAbout__container{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 3px;
+}
+
+.postAbout__header{
+  background-color: #1d5f69;
+  height: 2rem;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.postAbout__community-group-info{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+
+.postAbout__community-header-info, .postAbout__community-birthday, .postAbout__community-people-connected{
+  display: inline-flex;
+  align-items: center;
+}
+
+.postAbout__community-data-container{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.postAbout__community-group-info img{
+height: 50px;
+width: 50px;
+border-radius: 32px;
+}
+
+.postAbout__community-birthday img{
+  height: 25px;
+  width: 25px;
+}
+
+
+
