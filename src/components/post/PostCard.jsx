@@ -17,7 +17,7 @@ function PostCard() {
     <div className="postCard__container">
       <div className="postCard__up-down-votes">
         <img src={IconArrowUp}></img>
-        <p>1</p>
+        <p>222</p>
         <img src={IconArrowDown}></img>
       </div>
       <div>

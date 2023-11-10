@@ -54,7 +54,7 @@ function UserCommentaries() {
             ></Avatar>
             <div className="postComment__content-container">
               <span className="postComment__user-comment-info">
-                <p>{commentary.author}</p>
+                <p>{"RedditUser ·"}</p>
                 <p>{commentary.commentary_date}</p>
               </span>
               <div className="postComment__content">{commentary.commentary_content}</div>

@@ -12,11 +12,52 @@ import IconChainPost from "../../assets/icons/iconChainPost.png"
 import IconItalic from "../../assets/icons/iconItalic.png"
 import IconBold from "../../assets/icons/iconBold.png"
 import IconMore from "../../assets/icons/iconMore.png"
+import { FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
+import { useState } from "react";
 
 function PostComment() {
+  const [formData, setFormData] = useState({
+    // Incluye los campos de tu formulario aquí
+    commentary_author: 1,
+    commentary_content: "",
+    commentary_response_id:0,
+    commentary_votes:0
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();  
+    try {
+      const currentDate = new Date();
+      const isoString = currentDate.toISOString();
+      const response = await fetch("http://127.0.0.1:8000/redditClone/api/v1/commentary/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+       body: JSON.stringify({ ...formData, commentary_date: isoString }),
+      });
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+
   return (
     <div className='postComment__container'>
-        <Textarea placeholder='What are your thoughts?' height="200px" borderBottomLeftRadius="0" borderBottomRightRadius="0"/>
+      <form onSubmit={handleSubmit}>
+        <Textarea placeholder='What are your thoughts?' height="200px" borderBottomLeftRadius="0" borderBottomRightRadius="0"  name="commentary_content"
+          value={formData.commentary}
+          onChange={handleChange}/>
         <div className='postComment__comment-options'>
           <button className="postComment__comment-options-logo" >
             <img  src={IconBold}></img>
@@ -57,10 +98,11 @@ function PostComment() {
           <button className='postComment__markdownMode-button'>
             Markdown Mode
           </button>
-          <button className='postComment__comment-button'>
+          <button className='postComment__comment-button' onClick={handleSubmit} >
             Comment
           </button>
         </div>
+        </form>
     </div>
   )
 }
