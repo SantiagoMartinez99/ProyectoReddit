@@ -16,7 +16,6 @@ import IconMore from "../../assets/icons/iconMore.png"
 function PostComment() {
   return (
     <div className='postComment__container'>
-        <p>Comentar como <span className='postComment__user-comment'>Wonderful-External22</span></p>
         <Textarea placeholder='What are your thoughts?' height="200px" borderBottomLeftRadius="0" borderBottomRightRadius="0"/>
         <div className='postComment__comment-options'>
           <button className="postComment__comment-options-logo" >

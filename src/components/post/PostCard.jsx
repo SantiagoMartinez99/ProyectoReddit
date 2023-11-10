@@ -11,6 +11,7 @@ import { Link } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import PostComment from "./PostComment";
 import PostDiscussion from "./PostDiscussion";
+import UserCommentaries from "./UserCommentaries";
 function PostCard() {
   return (
     <div className="postCard__container">
@@ -76,7 +77,7 @@ function PostCard() {
             </button>
           </div>
         </div>
-        
+        <p>Comentar como <span className='postComment__user-comment'>Wonderful-External22</span></p>
         <PostComment />
         <PostDiscussion/>
 

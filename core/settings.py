@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os 
 import environ
+from django.utils.translation import gettext_lazy as _
 
 env=environ.Env()
 environ.Env.read_env()
@@ -44,7 +45,9 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 
-PROJECT_APPS=[]
+PROJECT_APPS=[
+    'apps.redditClone'
+]
 
 THIRD_PARTY_APPS=[
     'corsheaders',
@@ -137,7 +140,17 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+
+LANGUAGES=[
+    ('en', _('English')),
+    ('es', _('Spanish')),
+]
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
+
+LANGUAGE_CODE='en'
 
 TIME_ZONE = 'UTC'
 
@@ -176,6 +189,7 @@ CORS_ORIGIN_WHITELIST= env.list('CORS_ORIGIN_WHITELIST_DEV')
 CSRF_TRUSTED_ORIGINS=env.list('CSRF_TRUSTED_ORIGINS_DEV')
 
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+
 
 if not DEBUG:
     CSRF_TRUSTED_ORIGINS=env.list('CSRF_TRUSTED_ORIGINS_DEPLOY')

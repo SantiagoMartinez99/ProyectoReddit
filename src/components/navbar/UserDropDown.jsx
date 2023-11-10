@@ -29,7 +29,7 @@ function UserDropDown() {
       >
         <div className="userDropDown__profile-container">
         <Avatar
-          name="Sasuke Uchiha"
+          name="Wonderful-External22"
           src={ProfileImage}
           marginLeft="10px"
           height="38px"

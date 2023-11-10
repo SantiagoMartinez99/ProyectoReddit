@@ -18,22 +18,32 @@ h1 {
   font-weight: 500;
 }
 
-
-.connected__circle{
-  background-color:rgb(23, 190, 23);
+.connected__circle {
+  background-color: rgb(23, 190, 23);
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: 3px solid white;
 }
+
+.icon__language{
+  height: 25px;
+  width: 25px;
+}
+
 /* NAVBAR=================================================================== */
 .navbar__container {
+  z-index: 1;
+  background: white;
   height: 52px;
   padding: 0 0 6px 15px;
   display: grid;
   grid-template-columns: 200px 200px 4fr 2fr 2fr;
   align-items: center;
   gap: 1em;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .navbar__logo-section {
@@ -113,7 +123,7 @@ h1 {
   width: 100%;
   height: 100%;
   padding: 0 9vw 0 9vw;
-  background-color: #929292;
+  background-color: #323232;
 }
 
 .PostHeader__container {
@@ -157,10 +167,16 @@ h1 {
 /* POST CONTENT=============================================== */
 .post__content-container {
   display: grid;
-  padding: 2rem 2rem 0 2rem;
-  gap: 1rem;
-  grid-template-columns: 2fr 1fr;
+  padding: 2rem;
+  gap: 2rem;
+  grid-template-columns: 5fr 2fr;
   background-color: #1d5f69;
+}
+
+.post__content-container-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 /* POST CARD=====================================================*/
@@ -209,7 +225,8 @@ h1 {
 .postCard__title {
   display: grid;
   grid-template-columns: 3fr 150px;
-  height: 150px;
+  height: 200px;
+  margin-bottom: 3rem;
 }
 
 .postCard__title & Link {
@@ -240,7 +257,7 @@ h1 {
   margin-right: 7%;
 }
 
-.postComment__user-comment{
+.postComment__user-comment {
   margin-top: 10%;
   color: #ff5502;
   height: 100%;
@@ -280,44 +297,48 @@ h1 {
   margin: 4px;
 }
 
+.postComment__user-comment-info {
+  display: inline-flex;
+  gap: 5px;
+}
+
 /* POST COMUNITY========================================================= */
-.postCommunity__container{
-  height: 100%;
+.postCommunity__container {
   display: flex;
   flex-direction: column;
   margin: 20px 7% 20px 0;
+  gap: 10px;
 }
 
-.postCommunity__other-discussions{
+.postCommunity__other-discussions {
   color: #ff5502;
   font-weight: 500;
   display: flex;
   flex-direction: row-reverse;
-  border-top:  1px  solid #ededed;
+  border-top: 1px solid #ededed;
+  padding: 1rem;
 }
-
 
 .postCommunity__filters {
   display: grid;
-  width: 100% ;
+  width: 100%;
   grid-template-columns: 40% 40%;
-  
+
   gap: 1rem;
 }
 
-
-
-
 /* POST ABOUT==================================== */
-.postAbout__container{
+.postAbout__container,
+.communityRules__container {
   display: flex;
   flex-direction: column;
   background-color: #fff;
   border: 2px solid #fff;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
-.postAbout__header{
+.postAbout__header,
+.communityRules__header {
   background-color: #1d5f69;
   height: 2rem;
   width: 100%;
@@ -325,39 +346,92 @@ h1 {
   padding: 10px;
   align-items: center;
   gap: 1rem;
-
+  color: #fff;
+  font-weight: 500;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
 }
 
-.postAbout__community-group-info{
+.postAbout__community-group-info {
   display: flex;
   flex-direction: column;
   padding: 10px;
   gap: 10px;
 }
 
-
-.postAbout__community-header-info, .postAbout__community-birthday, .postAbout__community-people-connected{
+.postAbout__community-header-info,
+.postAbout__community-birthday,
+.postAbout__community-people-connected {
   display: inline-flex;
   align-items: center;
+  gap: 1rem;
 }
 
-.postAbout__community-data-container{
+.postAbout__community-data-container {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
-.postAbout__community-group-info img{
-height: 50px;
-width: 50px;
-border-radius: 32px;
+.postAbout__community-group-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 32px;
 }
 
-.postAbout__community-birthday img{
+.postAbout__community-birthday img,
+.eyeIcon__community__theme {
   height: 25px;
   width: 25px;
 }
 
+.postAbout__community-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
 
+.postAbout__button-join,
+.postAbout__button-create-post {
+  width: 80%;
+  height: 2rem;
+  background-color: #ff5502;
+  color: white;
+  font-weight: 500;
+  border-radius: 12px;
+  align-items: center;
+}
 
+/* USERS commentaries============================== */
+.UserComments_container{
+  padding-bottom: 2rem;
+}
+
+.postComment__content-container {
+  margin-left: 10px;
+}
+
+.userComments__comentary-container {
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+  margin-right: 7%;
+}
+
+.userCommentaries-commentary-options,
+.userCommentaries-commentary-optionbar {
+  display: inline-flex;
+  align-items: center;
+}
+
+.userCommentaries-commentary-optionbar {
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.userCommentaries-commentary-options img {
+  height: 26px;
+  width: 32px;
+}

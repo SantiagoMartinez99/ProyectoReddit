@@ -1,0 +1,24 @@
+{
+  "redditRules": {
+    "rule1": {
+      "rule_title": "1. Los envíos deben ceñirse al tema y ser de calidad",
+      "rule_content": "Los envíos deben estar directamente relacionados con la programación. Sólo porque tenga un ordenador dentro no lo convierte en programación.\r\nLos envíos que no contengan nada real y que simplemente estén cultivando direcciones de correo electrónico serán eliminados como spam.\r\nLos enlaces directos a demos de aplicaciones (sin relación con la programación) serán eliminados. En su lugar, enlaza a una entrada de blog/post-mortem sobre el proceso de desarrollo."
+    },
+    "rule2": {
+      "rule_title": "2. Ninguna encuesta",
+      "rule_content": "Las encuestas suelen ser odiosas. Prácticamente cualquier encuesta, académica o no, será eliminada por el equipo de mods. Echa un vistazo a /r/samplesize como un lugar alternativo para enviar encuestas. Se hacen excepciones para las encuestas de alta calidad organizadas por miembros establecidos de la comunidad de desarrollo de software (en realidad sólo la encuesta anual SO Developer Survey)."
+    },
+    "rule3": {
+      "rule_title": "3. No se aceptan currículos/listas de empleo",
+      "rule_content": "/r/programming no es un foro de empleo. Por favor, visite /r/forhire o /r/jobbit para enviar currículos o puestos vacantes.\r\nnLos envíos sobre el tema de la contratación de programadores o ser contratado como programador son generalmente aceptables, siempre y cuando no sean currículos o un anuncio de un puesto vacante disfrazado."
+    },
+    "rule4": {
+      "rule_title": "4. /r/programming no es un foro de soporte",
+      "rule_content": "/r/programming no es un foro de soporte. Si tienes alguna pregunta, consulta /r/learnprogramming, /r/cscareerquestions o Stack Overflow."
+    },
+    "rule5": {
+      "rule_title": "5. Spam",
+      "rule_content": "Puede que Reddit haya relajado su postura sobre la autopromoción, pero /r/programming no lo ha hecho:\r\n-Si la mayoría de tus contribuciones a reddit constituyen autopromoción, serás baneado\r\n-Si empiezas inmediatamente a enviar material promocional con una cuenta nueva, serás baneado\r\n-Los mods de /r/programming tienen trabajos diarios, no perdemos el tiempo repartiendo advertencias\r\nSi deseas usar reddit como herramienta promocional, por favor hazlo legítimamente."
+    }
+  }
+}
